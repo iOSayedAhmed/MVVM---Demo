@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="MVVM_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FPG-vg-VNP">
+                                <rect key="frame" x="45" y="213" width="300" height="166.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-i2-ISY">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3VD-9Z-CKp">
+                                        <rect key="frame" x="0.0" y="65.333333333333314" width="300" height="35.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vng-pO-CNR">
+                                        <rect key="frame" x="0.0" y="131" width="300" height="35.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="loginClickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beo-YQ-Csh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166.33000000000001" id="YKm-Za-anb"/>
+                                    <constraint firstAttribute="width" constant="300" id="hVE-6O-Rkz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.27044567404354314" green="0.35619489426882028" blue="0.43726710683291725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FPG-vg-VNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="icG-b0-vVI"/>
+                            <constraint firstItem="FPG-vg-VNP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTJ-pe-nBH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="V3b-i2-ISY" id="SLq-L5-lU0"/>
+                        <outlet property="passwordTextField" destination="3VD-9Z-CKp" id="c0J-2D-KfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="4"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="qDL-NT-omf">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="OIK-Jr-Blj" customClass="HomeVC" customModule="MVVM_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QON-tS-2Zs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-vD-Gyd">
+                                <rect key="frame" x="138.66666666666666" y="405.33333333333331" width="113" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9rR-42-vmf"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="Q9D-vD-Gyd" firstAttribute="centerY" secondItem="QON-tS-2Zs" secondAttribute="centerY" id="DTm-Bd-uxQ"/>
+                            <constraint firstItem="Q9D-vD-Gyd" firstAttribute="centerX" secondItem="QON-tS-2Zs" secondAttribute="centerX" id="QGz-Jb-H5x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Q9D-vD-Gyd" id="Rlj-ls-REy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSN-sa-uvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812.30769230769226" y="5.6872037914691944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
